@@ -6,6 +6,6 @@ By developing new features in separated branches, it's possible to work on all o
 free from questionable code. 
 Each branch represents an indipendent line of development and can be used by a development team. 
 When the feature developed in the branch is completed and hard tested, it can be marked as DONE and ready to be merged into the "master" branch. 
-I would merge into the "master" branch only when there is the ok to publish that particular feature in the production environment.
+I would merge the development branches into the "master" branch only when there is the ok to publish that particular feature in the production environment.
 This is because often happens or that the Customer has second thoughts about sending online features already implemented 
 or that he wants to postpone the publication.
