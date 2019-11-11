@@ -1,0 +1,11 @@
+For the scenario described in your questions I would use a version control system (such as git or svn), 
+because it helps software teams to manage changes to source code over time and to develop more features in parallel. 
+In particular, with Git I would use the branch "master" only for the stable version of the code, that is tested and ready to go live. 
+For each new features I would swap to a new branch created by the "master" branch. 
+By developing new features in separated branches, it's possible to work on all of them in parallel and it also keeps the main master branch
+free from questionable code. 
+Each branch represents an indipendent line of development and can be used by a development team. 
+When the feature developed in the branch is completed and hard tested, it can be marked as DONE and ready to be merged into the "master" branch. 
+I would merge into the "master" branch only when there is the ok to publish that particular feature in the production environment.
+This is because often happens or that the Customer has second thoughts about sending online features already implemented 
+or that he wants to postpone the publication.
