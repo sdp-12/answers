@@ -1,0 +1,27 @@
+//my nested array 
+NSArray *one = [NSArray arrayWithObject:@3];
+NSArray *two = [NSArray arrayWithObjects:@1, @2, one, nil];
+NSArray *nested = [NSArray arrayWithObjects:two, @4, nil];
+NSLog(@"NESTED ARRAY %@", nested);
+
+//empty array 
+NSMutableArray *flatA = [NSMutableArray new];
+
+[self moveArray:nested inFlatArray:flatA];
+      
+NSLog(@"FLAT ARRAY %@", flatA);
+
+/*
+  Recursive funcion used to flatten an array of arbitrary nested array.
+  input: nested array, empty array 
+*/
+- (void)moveArray: (NSArray *)nested inFlatArray: (NSMutableArray *)flatA{
+
+    for (id obj in nested) {
+        if ([obj isKindOfClass:[NSNumber class]]) {
+            [flatA addObject:obj];
+        } else {
+            [self moveArray:obj inFlatArray:flatA];
+        }
+    }
+}
